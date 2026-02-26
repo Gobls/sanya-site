@@ -1,0 +1,46 @@
+.works {
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    &__picture {
+        display: block;
+        overflow: hidden;
+        height: 30rem;
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    &__card {
+        border-radius: 2rem;
+        box-shadow: 0px 0px 2.2rem .5rem rgba(81, 83, 88, 0.231);
+        transition: transform $transition, color $transition;
+        background-color: $white;
+
+        @media(hover: hover) {
+            &:hover {
+                transform: scale(1.05);
+                color: $main;
+            }
+        }
+    }
+
+    &__info {
+        padding: 2rem;
+        font-weight: 400;
+        font-size: 2.6rem;
+        text-align: center;
+
+        &-title {
+            font-weight: 600;
+            padding-bottom: 1rem;
+        }
+    }
+
+    @media(max-width: 48rem) {
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

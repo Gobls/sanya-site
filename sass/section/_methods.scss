@@ -1,0 +1,32 @@
+.methods {
+    &__cards {
+        display: flex;
+        gap: 10rem;
+    }
+
+    &__card {
+        border-radius: 2rem;
+        box-shadow: 0px 0px 2.2rem .5rem rgba(81, 83, 88, 0.231);
+        background-color: $white;
+    }
+
+    &__picture {
+        display: block;
+        height: 40rem;
+        border-radius: 2rem 2rem 0 0;
+        overflow: hidden;
+    }
+
+    &__info {
+        padding: 2rem;
+        font-weight: 400;
+        font-size: 2.6rem;
+        text-align: center;
+    }
+
+    @media(max-width: 48rem){
+        &__cards{
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.price {
+    &__tables {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    &__table {
+        font-weight: 400;
+        font-size: 2.6rem;
+        border-collapse: collapse;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 2rem;
+        overflow: hidden;
+        box-shadow: 0px 0px 2.2rem .5rem rgba(81, 83, 88, 0.231);
+
+        thead {
+            background: $main-gr;
+
+            th {
+                padding: 2rem;
+                font-size: 2.8rem;
+                font-weight: 600;
+                color: #fff;
+
+                &:first-child {
+                    padding-left: 3rem;
+                    text-align: left;
+                }
+
+                &:last-child {
+                    padding-right: 3rem;
+                    text-align: right;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                transition: background-color $transition;
+
+                &:nth-child(even) {
+                    background-color: rgba($main, 0.1);
+                }
+
+                @media(hover: hover) {
+                    &:hover {
+                        background-color: rgba($main, 0.2);
+                    }
+                }
+
+                td {
+                    padding: 1.8rem 2rem;
+                    font-size: 2.4rem;
+
+                    &:first-child {
+                        padding-left: 3rem;
+                        font-weight: 500;
+                    }
+
+                    &:last-child {
+                        padding-right: 3rem;
+                        text-align: right;
+                        font-weight: 600;
+                        color: #8b4513;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 48rem) {
+        &__tables {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

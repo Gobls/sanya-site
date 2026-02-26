@@ -1,0 +1,62 @@
+.header {
+    z-index: 100;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 8rem;
+
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        width: 80rem;
+        justify-content: space-between;
+
+        &-item {
+            a {
+                color: #FFF;
+                font-weight: 400;
+                font-size: 2.2rem;
+                transition: color $transition;
+            }
+
+            @media(hover: hover) {
+                a:hover {
+                    color: $main;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 48rem) {
+        height: auto;
+        
+        &__container {
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem 0;
+        }
+        
+        &__logo {
+            display: none;
+        }
+        
+        &__menu {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem 2rem;
+        }
+    }
+}
